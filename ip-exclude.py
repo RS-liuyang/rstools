@@ -27,7 +27,7 @@ if __name__ == "__main__":
     for line in f2:
         ipset2.add(line)
 
-    ipset3 = ipset1 ^ ipset2
+    ipset3 = ipset1 - ipset2
 
     for cidr in ipset3.iter_cidrs():
         print cidr
